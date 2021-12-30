@@ -24,6 +24,6 @@ public class Matrix {
                 matrix[i][j] = scanner.nextInt();
             }
         }
-
+        System.out.println(Arrays.deepToString(matrix));
     }
 }
