@@ -1,6 +1,6 @@
 package Example2;
 
-public class Animal {
+public abstract class Animal {
     private String name;
 
     public Animal(String name) {
@@ -15,7 +15,5 @@ public class Animal {
         this.name = name;
     }
 
-    public String greet() {
-        return "The animal makes a sound";
-    }
+    public abstract String greet();
 }

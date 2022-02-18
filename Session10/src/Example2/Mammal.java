@@ -1,6 +1,6 @@
 package Example2;
 
-public class Mammal extends Animal {
+public abstract class Mammal extends Animal {
 
     public Mammal(String name) {
         super(name);

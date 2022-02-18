@@ -2,7 +2,13 @@ package Example2;
 
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal("animal1");
+        Animal animal = new Animal("animal1") {
+            @Override
+            public String greet() {
+                return null;
+            }
+        };
+        animal.greet();
         Animal dog = new Dog("dog1");
         Cat cat = new Cat("cat1");
 
@@ -15,6 +21,8 @@ public class Main {
         printInformation(animal);
         printInformation(dog);
         printInformation(cat);
+        Fish fish = new Fish("redFish");
+        System.out.println(fish.greet());
     }
 
     public static void printInformation(Animal animal) {
@@ -30,7 +38,12 @@ public class Main {
 
     public static Object createObject(boolean flag) {
         if (flag)
-            return new Animal("animal");
+            return new Animal("animal") {
+                @Override
+                public String greet() {
+                    return "make the sound";
+                }
+            };
         else if (flag && true)
             return new Fish("fish");
         return new Main();
